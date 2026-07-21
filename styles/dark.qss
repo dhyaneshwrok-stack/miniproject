@@ -1,0 +1,91 @@
+/* =========================================================================
+   PulseMind - Global Dark Stylesheet
+   Values here must stay in sync with styles/theme.py (Palette / Spacing).
+   ========================================================================= */
+
+* {
+    outline: none;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+QWidget {
+    background-color: transparent;
+    color: #FFFFFF;
+}
+
+QMainWindow, #CentralSurface {
+    background-color: #0B0F19;
+}
+
+/* -------------------------------------------------------------------- */
+/* Scrollbars                                                            */
+/* -------------------------------------------------------------------- */
+
+QScrollBar:vertical {
+    background: transparent;
+    width: 8px;
+    margin: 4px 0px 4px 0px;
+}
+QScrollBar::handle:vertical {
+    background: #2B3445;
+    border-radius: 4px;
+    min-height: 24px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #3A4558;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+QScrollBar:horizontal {
+    background: transparent;
+    height: 8px;
+}
+QScrollBar::handle:horizontal {
+    background: #2B3445;
+    border-radius: 4px;
+    min-width: 24px;
+}
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+/* -------------------------------------------------------------------- */
+/* Tooltips                                                              */
+/* -------------------------------------------------------------------- */
+
+QToolTip {
+    background-color: #1C2431;
+    color: #FFFFFF;
+    border: 1px solid #2B3445;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+/* -------------------------------------------------------------------- */
+/* Menus (used by dropdown widgets)                                      */
+/* -------------------------------------------------------------------- */
+
+QMenu {
+    background-color: #1C2431;
+    border: 1px solid #2B3445;
+    border-radius: 10px;
+    padding: 6px;
+}
+QMenu::item {
+    padding: 8px 14px;
+    border-radius: 6px;
+    color: #FFFFFF;
+}
+QMenu::item:selected {
+    background-color: #E53935;
+}
+
+/* -------------------------------------------------------------------- */
+/* Splitter handle (reserved for future resizable panes)                 */
+/* -------------------------------------------------------------------- */
+
+QSplitter::handle {
+    background-color: #2B3445;
+}
