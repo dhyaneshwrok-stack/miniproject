@@ -1,12 +1,6 @@
-# --- Phase 1 (required to run this build) ---
 PySide6>=6.7,<7.0
-
-# --- Reserved for later phases (per PRD Technology Stack, section 7) ---
-# Uncomment as each phase is implemented.
-# pyqtgraph>=0.13        # Phase 3 - ECG waveform viewer
-# pandas>=2.2            # Phase 3 - dataset loading
-# numpy>=1.26            # Phase 4 - signal processing
-# scipy>=1.13            # Phase 4 - signal processing
-# reportlab>=4.2         # Phase 5 - PDF report generation
-# Pillow>=10.4            # Phase 5 - image handling in reports
-# pyinstaller>=6.10       # Phase 6 - packaging to .exe
+numpy>=1.26
+pandas>=2.2
+scipy>=1.13
+matplotlib>=3.8
+reportlab>=4.2

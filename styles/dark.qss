@@ -1,6 +1,6 @@
 /* =========================================================================
    PulseMind - Global Dark Stylesheet
-   Values here must stay in sync with styles/theme.py (Palette / Spacing).
+   Responsive version
    ========================================================================= */
 
 * {
@@ -8,51 +8,96 @@
     font-family: "Inter", "Segoe UI", sans-serif;
 }
 
+/* -------------------------------------------------------------------------
+   Global widgets
+   ------------------------------------------------------------------------- */
+
 QWidget {
+    color: #FFFFFF;
+}
+
+QLabel {
     background-color: transparent;
     color: #FFFFFF;
 }
 
-QMainWindow, #CentralSurface {
+QMainWindow {
     background-color: #0B0F19;
 }
 
-/* -------------------------------------------------------------------- */
-/* Scrollbars                                                            */
-/* -------------------------------------------------------------------- */
+#CentralSurface {
+    background-color: #0B0F19;
+}
+
+#MainBody {
+    background-color: #0B0F19;
+}
+
+#MainContent {
+    background-color: #0B0F19;
+}
+
+#PageStack {
+    background-color: #0B0F19;
+}
+
+#PageScrollArea {
+    background-color: #0B0F19;
+    border: none;
+}
+
+#PageContent {
+    background-color: #0B0F19;
+}
+
+/* -------------------------------------------------------------------------
+   Scrollbars
+   ------------------------------------------------------------------------- */
 
 QScrollBar:vertical {
     background: transparent;
     width: 8px;
     margin: 4px 0px 4px 0px;
 }
+
 QScrollBar::handle:vertical {
     background: #2B3445;
     border-radius: 4px;
     min-height: 24px;
 }
+
 QScrollBar::handle:vertical:hover {
     background: #3A4558;
 }
-QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
     height: 0px;
 }
+
 QScrollBar:horizontal {
     background: transparent;
     height: 8px;
 }
+
 QScrollBar::handle:horizontal {
     background: #2B3445;
     border-radius: 4px;
     min-width: 24px;
 }
-QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+
+QScrollBar::handle:horizontal:hover {
+    background: #3A4558;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
     width: 0px;
 }
 
-/* -------------------------------------------------------------------- */
-/* Tooltips                                                              */
-/* -------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------
+   Tooltips
+   ------------------------------------------------------------------------- */
 
 QToolTip {
     background-color: #1C2431;
@@ -63,9 +108,9 @@ QToolTip {
     font-size: 12px;
 }
 
-/* -------------------------------------------------------------------- */
-/* Menus (used by dropdown widgets)                                      */
-/* -------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------
+   Menus
+   ------------------------------------------------------------------------- */
 
 QMenu {
     background-color: #1C2431;
@@ -73,19 +118,119 @@ QMenu {
     border-radius: 10px;
     padding: 6px;
 }
+
 QMenu::item {
     padding: 8px 14px;
     border-radius: 6px;
     color: #FFFFFF;
+    background-color: transparent;
 }
+
 QMenu::item:selected {
     background-color: #E53935;
 }
 
-/* -------------------------------------------------------------------- */
-/* Splitter handle (reserved for future resizable panes)                 */
-/* -------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------
+   Inputs
+   ------------------------------------------------------------------------- */
+
+QLineEdit,
+QTextEdit,
+QPlainTextEdit,
+QComboBox,
+QDateEdit,
+QSpinBox,
+QDoubleSpinBox {
+    color: #FFFFFF;
+    background-color: #151B26;
+    border: 1px solid #2B3445;
+    border-radius: 8px;
+    padding: 8px 10px;
+}
+
+QLineEdit:focus,
+QTextEdit:focus,
+QPlainTextEdit:focus,
+QComboBox:focus,
+QDateEdit:focus,
+QSpinBox:focus,
+QDoubleSpinBox:focus {
+    border: 1px solid #E53935;
+}
+
+QLineEdit:disabled,
+QTextEdit:disabled,
+QPlainTextEdit:disabled,
+QComboBox:disabled,
+QDateEdit:disabled,
+QSpinBox:disabled,
+QDoubleSpinBox:disabled {
+    color: #6B7789;
+    background-color: #0F141E;
+}
+
+/* -------------------------------------------------------------------------
+   Buttons
+   ------------------------------------------------------------------------- */
+
+QPushButton {
+    min-height: 38px;
+}
+
+QPushButton:disabled {
+    color: #6B7789;
+}
+
+/* -------------------------------------------------------------------------
+   Tables
+   ------------------------------------------------------------------------- */
+
+QTableWidget,
+QTableView {
+    background-color: #151B26;
+    alternate-background-color: #111722;
+    color: #FFFFFF;
+    border: 1px solid #2B3445;
+    border-radius: 10px;
+    gridline-color: #2B3445;
+}
+
+QHeaderView::section {
+    background-color: #1C2431;
+    color: #94A3B8;
+    border: none;
+    border-bottom: 1px solid #2B3445;
+    padding: 8px;
+    font-weight: 600;
+}
+
+QTableWidget::item:selected,
+QTableView::item:selected {
+    background-color: #3A2023;
+    color: #FFFFFF;
+}
+
+/* -------------------------------------------------------------------------
+   Splitter
+   ------------------------------------------------------------------------- */
 
 QSplitter::handle {
     background-color: #2B3445;
+}
+
+/* -------------------------------------------------------------------------
+   Progress
+   ------------------------------------------------------------------------- */
+
+QProgressBar {
+    background-color: #151B26;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+QProgressBar::chunk {
+    background-color: #E53935;
+    border-radius: 4px;
 }

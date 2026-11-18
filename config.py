@@ -37,7 +37,7 @@ class AppInfo:
 
     name: str = "PulseMind"
     tagline: str = "Smart ECG Signal Analysis & Report Generation System"
-    version: str = "0.1.0 (Phase 1 - UI Foundation)"
+    version: str = "0.2.0 (ECG Analysis Backend)"
     organization: str = "PulseMind"
     college: str = "Academic Mini Project"
 
@@ -93,8 +93,8 @@ class FeatureFlags:
     restructuring the navigation or view layer.
     """
 
-    ECG_PROCESSING_ENABLED: bool = False
-    REPORT_GENERATION_ENABLED: bool = False
+    ECG_PROCESSING_ENABLED: bool = True
+    REPORT_GENERATION_ENABLED: bool = True
     PATIENT_CRUD_ENABLED: bool = False
 
 
